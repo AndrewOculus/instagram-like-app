@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492FD3C920580F8E00EB0482 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492FD3C820580F8E00EB0482 /* UserCell.swift */; };
+		492FD3CB2058106500EB0482 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492FD3CA2058106500EB0482 /* UsersViewController.swift */; };
+		493B8ADE20594C50005B6E21 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B8ADD20594C50005B6E21 /* User.swift */; };
 		49988BCA205543B7001AE387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988BC9205543B7001AE387 /* AppDelegate.swift */; };
 		49988BCF205543B7001AE387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49988BCD205543B7001AE387 /* Main.storyboard */; };
 		49988BD1205543B7001AE387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49988BD0205543B7001AE387 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		12F540879153E7D793C022C2 /* Pods_InstagramLike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramLike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		492FD3C820580F8E00EB0482 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		492FD3CA2058106500EB0482 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		493B8ADD20594C50005B6E21 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49988BC6205543B7001AE387 /* InstagramLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49988BC9205543B7001AE387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49988BCE205543B7001AE387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +50,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		493B8ADA20594BBF005B6E21 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				492FD3CA2058106500EB0482 /* UsersViewController.swift */,
+				49B4A461205559B5000812E2 /* SignupViewController.swift */,
+				49B14A9B2057D618002FD52E /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		493B8ADB20594BDC005B6E21 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				493B8ADD20594C50005B6E21 /* User.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		493B8ADC20594BE4005B6E21 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				492FD3C820580F8E00EB0482 /* UserCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		49988BBD205543B7001AE387 = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +97,15 @@
 		49988BC8205543B7001AE387 /* InstagramLike */ = {
 			isa = PBXGroup;
 			children = (
-				49B4A461205559B5000812E2 /* SignupViewController.swift */,
+				493B8ADC20594BE4005B6E21 /* Custom Cell */,
+				493B8ADB20594BDC005B6E21 /* Objects */,
+				493B8ADA20594BBF005B6E21 /* ViewController */,
 				49988BC9205543B7001AE387 /* AppDelegate.swift */,
 				49988BCD205543B7001AE387 /* Main.storyboard */,
 				49988BD0205543B7001AE387 /* Assets.xcassets */,
 				49988BD2205543B7001AE387 /* LaunchScreen.storyboard */,
 				49988BD5205543B7001AE387 /* Info.plist */,
 				49988BDB2055463E001AE387 /* GoogleService-Info.plist */,
-				49B14A9B2057D618002FD52E /* LoginViewController.swift */,
 			);
 			path = InstagramLike;
 			sourceTree = "<group>";
@@ -230,7 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492FD3C920580F8E00EB0482 /* UserCell.swift in Sources */,
 				49B14A9C2057D618002FD52E /* LoginViewController.swift in Sources */,
+				493B8ADE20594C50005B6E21 /* User.swift in Sources */,
+				492FD3CB2058106500EB0482 /* UsersViewController.swift in Sources */,
 				49B4A462205559B5000812E2 /* SignupViewController.swift in Sources */,
 				49988BCA205543B7001AE387 /* AppDelegate.swift in Sources */,
 			);
