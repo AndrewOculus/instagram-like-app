@@ -58,8 +58,85 @@ class UsersViewController: UIViewController ,UITableViewDataSource , UITableView
         cell.userLabel.text = self.users[indexPath.row].fullName
         cell.userId = self.users[indexPath.row].userID
         cell.userImage.downloadImage(from: users[indexPath.row].imagePath)
-        
+        checkFollowing(cellForRowAt:indexPath)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let uid = Auth.auth().currentUser!.uid
+        let ref = Database.database().reference()
+        let key = ref.child("users").childByAutoId().key
+        
+        var isFollower = false
+        
+        ref.child("users").child(uid).child("following").queryOrderedByKey().observeSingleEvent(of: .value, with: {snapshot in
+            if let following = snapshot.value as? [String : AnyObject] {
+                for (ke,value) in following{
+
+                    print("\(value as! String) and \(self.users[indexPath.row].userID)")
+
+                    if value as! String == self.users[indexPath.row].userID
+                    {
+                        print("ok")
+
+                        isFollower = true
+                        ref.child("users").child(uid).child("following/\(ke)").removeValue()
+                        ref.child("users").child(self.users[indexPath.row].userID).child("followers/\(ke)").removeValue()
+                        
+                        self.tableView.cellForRow(at: indexPath)?.accessoryType = .none
+                    }
+                }
+            }
+            if !isFollower {
+                let following = ["following/\(key)" : self.users[indexPath.row].userID]
+                let followers = ["followers/\(key)" : uid]
+                
+                ref.child("users").child(uid).updateChildValues(following)
+                ref.child("users").child(self.users[indexPath.row].userID).updateChildValues(followers)
+                
+                self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            }
+        })
+        ref.removeAllObservers()
+    }
+    
+    func checkFollowing( cellForRowAt indexPath: IndexPath)
+    {
+        
+        let uid = Auth.auth().currentUser!.uid
+        let ref = Database.database().reference()
+        let key = ref.child("users").childByAutoId().key
+        
+        var isFollower = false
+        
+        ref.child("users").child(uid).child("following").queryOrderedByKey().observeSingleEvent(of: .value, with: {snapshot in
+            if let following = snapshot.value as? [String : AnyObject] {
+                for (ke,value) in following{
+                    
+                    if value as! String == self.users[indexPath.row].userID
+                    {
+                        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+
+                    }
+                    
+                    /*
+                    print("\(value as! String) and \(self.users[indexPath.row].userID)")
+                    
+                    if value as! String == self.users[indexPath.row].userID
+                    {
+                        print("ok")
+                        
+                        isFollower = true
+                        ref.child("users").child(uid).child("following/\(ke)").removeValue()
+                        ref.child("users").child(self.users[indexPath.row].userID).child("followers/\(ke)").removeValue()
+                        
+                        self.tableView.cellForRow(at: indexPath)?.accessoryType = .none
+                    }*/
+                }
+            }
+        })
+        ref.removeAllObservers()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
