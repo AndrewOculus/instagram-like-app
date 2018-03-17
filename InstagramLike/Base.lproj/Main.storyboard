@@ -219,6 +219,11 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="10I-OL-8Oy"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TJd-qB-jw2">
+                                            <connections>
+                                                <segue destination="UUo-cP-Tmi" kind="show" id="IKx-IX-99C"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -246,5 +251,100 @@
             </objects>
             <point key="canvasLocation" x="1530" y="122.53521126760563"/>
         </scene>
+        <!--Update View Controller-->
+        <scene sceneID="Tdu-g3-yHe">
+            <objects>
+                <viewController id="UUo-cP-Tmi" customClass="UpdateViewController" customModule="InstagramLike" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ki-uB-ePT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N50-xQ-5gT">
+                                <rect key="frame" x="0.0" y="16" width="320" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.70131872539999995" blue="0.021940598049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="1" green="0.70131872539999995" blue="0.021940598049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Upload Image" id="cvd-zS-UhQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="T1e-jU-cN1">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="II7-My-zE9" kind="show" id="dV0-dK-hQU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-e2-2dQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
+                                <color key="backgroundColor" red="1" green="0.70131872539999995" blue="0.021940598049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="5ye-ND-jWh"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-WS-5El">
+                                <rect key="frame" x="28" y="81" width="265" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="Nc4-7u-EDs"/>
+                                    <constraint firstAttribute="width" constant="265" id="etz-r0-0eL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu9-Zc-odL">
+                                <rect key="frame" x="116" y="143" width="89" height="30"/>
+                                <state key="normal" title="Select Image"/>
+                                <connections>
+                                    <action selector="pressSelect:" destination="UUo-cP-Tmi" eventType="touchUpInside" id="WI4-KQ-PDn"/>
+                                    <action selector="pressSelectPicture:" destination="zDv-dY-fC0" eventType="touchUpInside" id="eEB-vR-CG3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWh-dh-Hp4">
+                                <rect key="frame" x="145" y="251" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="pressPost:" destination="UUo-cP-Tmi" eventType="touchUpInside" id="MNu-GH-8hj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N50-xQ-5gT" firstAttribute="top" secondItem="G4l-e2-2dQ" secondAttribute="bottom" id="10A-V3-IQd"/>
+                            <constraint firstItem="nsr-WS-5El" firstAttribute="leading" secondItem="D19-wE-Qvl" secondAttribute="leading" constant="28" id="2ga-FS-8lN"/>
+                            <constraint firstItem="nsr-WS-5El" firstAttribute="top" secondItem="N50-xQ-5gT" secondAttribute="bottom" constant="21" id="4lE-uA-PsZ"/>
+                            <constraint firstItem="G4l-e2-2dQ" firstAttribute="centerX" secondItem="0ki-uB-ePT" secondAttribute="centerX" id="6iQ-eo-8NV"/>
+                            <constraint firstItem="N50-xQ-5gT" firstAttribute="top" secondItem="G4l-e2-2dQ" secondAttribute="bottom" id="6mv-M5-D0D"/>
+                            <constraint firstAttribute="trailing" secondItem="G4l-e2-2dQ" secondAttribute="trailing" id="8Ds-Uo-uSk"/>
+                            <constraint firstItem="G4l-e2-2dQ" firstAttribute="top" secondItem="0ki-uB-ePT" secondAttribute="top" id="C87-tX-gXZ"/>
+                            <constraint firstItem="G4l-e2-2dQ" firstAttribute="top" secondItem="0ki-uB-ePT" secondAttribute="top" id="DGs-n4-7rZ"/>
+                            <constraint firstItem="N50-xQ-5gT" firstAttribute="trailing" secondItem="D19-wE-Qvl" secondAttribute="trailing" id="Esw-nP-SLF"/>
+                            <constraint firstItem="D19-wE-Qvl" firstAttribute="trailing" secondItem="nsr-WS-5El" secondAttribute="trailing" constant="27" id="Hc2-YX-aTs"/>
+                            <constraint firstItem="Xu9-Zc-odL" firstAttribute="top" secondItem="nsr-WS-5El" secondAttribute="bottom" constant="-92" id="If2-9W-BJl"/>
+                            <constraint firstItem="G4l-e2-2dQ" firstAttribute="leading" secondItem="0ki-uB-ePT" secondAttribute="leading" id="Knf-Ef-jeG"/>
+                            <constraint firstItem="N50-xQ-5gT" firstAttribute="leading" secondItem="D19-wE-Qvl" secondAttribute="leading" id="SLk-4c-W0H"/>
+                            <constraint firstItem="N50-xQ-5gT" firstAttribute="leading" secondItem="D19-wE-Qvl" secondAttribute="leading" id="UaO-nO-kGx"/>
+                            <constraint firstItem="G4l-e2-2dQ" firstAttribute="leading" secondItem="0ki-uB-ePT" secondAttribute="leading" id="amZ-xB-BQM"/>
+                            <constraint firstAttribute="trailing" secondItem="G4l-e2-2dQ" secondAttribute="trailing" id="aw1-GP-LxA"/>
+                            <constraint firstItem="N50-xQ-5gT" firstAttribute="centerX" secondItem="0ki-uB-ePT" secondAttribute="centerX" id="qmj-xZ-UT6"/>
+                            <constraint firstItem="Xu9-Zc-odL" firstAttribute="leading" secondItem="nsr-WS-5El" secondAttribute="trailing" constant="-177" id="tfc-u3-PES"/>
+                            <constraint firstItem="N50-xQ-5gT" firstAttribute="trailing" secondItem="D19-wE-Qvl" secondAttribute="trailing" id="ypG-Bh-mIX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D19-wE-Qvl"/>
+                    </view>
+                    <connections>
+                        <outlet property="postBtn" destination="yWh-dh-Hp4" id="LmQ-9Z-bOL"/>
+                        <outlet property="previewImage" destination="nsr-WS-5El" id="uFV-1E-hjh"/>
+                        <outlet property="selectBtn" destination="Xu9-Zc-odL" id="x0n-vg-Fne"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZt-ab-xZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zDv-dY-fC0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2244.375" y="122.53521126760563"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IKx-IX-99C"/>
+    </inferredMetricsTieBreakers>
 </document>

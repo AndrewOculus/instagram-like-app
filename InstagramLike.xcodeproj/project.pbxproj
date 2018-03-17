@@ -17,6 +17,7 @@
 		49988BDC2055463E001AE387 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49988BDB2055463E001AE387 /* GoogleService-Info.plist */; };
 		49B14A9C2057D618002FD52E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B14A9B2057D618002FD52E /* LoginViewController.swift */; };
 		49B4A462205559B5000812E2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4A461205559B5000812E2 /* SignupViewController.swift */; };
+		49C817AC205BF75D00A44BBB /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C817AB205BF75D00A44BBB /* UpdateViewController.swift */; };
 		81D840752C469AE33F083F32 /* Pods_InstagramLike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F540879153E7D793C022C2 /* Pods_InstagramLike.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		49988BDB2055463E001AE387 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49B14A9B2057D618002FD52E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		49B4A461205559B5000812E2 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		49C817AB205BF75D00A44BBB /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		77743DD0563C4F525DA59D9A /* Pods-InstagramLike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramLike.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramLike/Pods-InstagramLike.release.xcconfig"; sourceTree = "<group>"; };
 		E709313656DC968ED71B77CB /* Pods-InstagramLike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramLike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramLike/Pods-InstagramLike.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +58,7 @@
 				492FD3CA2058106500EB0482 /* UsersViewController.swift */,
 				49B4A461205559B5000812E2 /* SignupViewController.swift */,
 				49B14A9B2057D618002FD52E /* LoginViewController.swift */,
+				49C817AB205BF75D00A44BBB /* UpdateViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				493B8ADE20594C50005B6E21 /* User.swift in Sources */,
 				492FD3CB2058106500EB0482 /* UsersViewController.swift in Sources */,
 				49B4A462205559B5000812E2 /* SignupViewController.swift in Sources */,
+				49C817AC205BF75D00A44BBB /* UpdateViewController.swift in Sources */,
 				49988BCA205543B7001AE387 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
