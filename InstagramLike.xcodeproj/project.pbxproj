@@ -10,6 +10,9 @@
 		492FD3C920580F8E00EB0482 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492FD3C820580F8E00EB0482 /* UserCell.swift */; };
 		492FD3CB2058106500EB0482 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492FD3CA2058106500EB0482 /* UsersViewController.swift */; };
 		493B8ADE20594C50005B6E21 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B8ADD20594C50005B6E21 /* User.swift */; };
+		4969D2D2205EE54D00168044 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969D2D1205EE54D00168044 /* PostCell.swift */; };
+		4969D2D4205EF36100168044 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969D2D3205EF36100168044 /* Post.swift */; };
+		4969D2D6205EF45F00168044 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969D2D5205EF45F00168044 /* FeedViewController.swift */; };
 		49988BCA205543B7001AE387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988BC9205543B7001AE387 /* AppDelegate.swift */; };
 		49988BCF205543B7001AE387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49988BCD205543B7001AE387 /* Main.storyboard */; };
 		49988BD1205543B7001AE387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49988BD0205543B7001AE387 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 		492FD3C820580F8E00EB0482 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		492FD3CA2058106500EB0482 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		493B8ADD20594C50005B6E21 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4969D2D1205EE54D00168044 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		4969D2D3205EF36100168044 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4969D2D5205EF45F00168044 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		49988BC6205543B7001AE387 /* InstagramLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49988BC9205543B7001AE387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49988BCE205543B7001AE387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +65,7 @@
 				49B4A461205559B5000812E2 /* SignupViewController.swift */,
 				49B14A9B2057D618002FD52E /* LoginViewController.swift */,
 				49C817AB205BF75D00A44BBB /* UpdateViewController.swift */,
+				4969D2D5205EF45F00168044 /* FeedViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -67,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				493B8ADD20594C50005B6E21 /* User.swift */,
+				4969D2D3205EF36100168044 /* Post.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -75,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				492FD3C820580F8E00EB0482 /* UserCell.swift */,
+				4969D2D1205EE54D00168044 /* PostCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -268,11 +277,14 @@
 			files = (
 				492FD3C920580F8E00EB0482 /* UserCell.swift in Sources */,
 				49B14A9C2057D618002FD52E /* LoginViewController.swift in Sources */,
+				4969D2D6205EF45F00168044 /* FeedViewController.swift in Sources */,
 				493B8ADE20594C50005B6E21 /* User.swift in Sources */,
 				492FD3CB2058106500EB0482 /* UsersViewController.swift in Sources */,
 				49B4A462205559B5000812E2 /* SignupViewController.swift in Sources */,
 				49C817AC205BF75D00A44BBB /* UpdateViewController.swift in Sources */,
+				4969D2D4205EF36100168044 /* Post.swift in Sources */,
 				49988BCA205543B7001AE387 /* AppDelegate.swift in Sources */,
+				4969D2D2205EE54D00168044 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
